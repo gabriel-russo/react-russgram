@@ -17,7 +17,7 @@ function Feed() {
     return (
         <Box flex={4} p={2}>
             {posts.map(post =>
-                <Post picture={post.picture.thumbnail} post={post.picture.large}
+                <Post key={post.login.uuid} picture={post.picture.thumbnail} post={post.picture.large}
                       name={post.name.first}/>)}
         </Box>
     )

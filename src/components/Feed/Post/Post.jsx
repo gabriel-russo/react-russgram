@@ -15,7 +15,7 @@ import {Favorite, Share, MoreVert, FavoriteBorder} from "@mui/icons-material";
 function Post(props) {
 
     return (
-        <Card sx={{margin: 5}}>
+        <Card sx={{margin: 5, width: {xs: '70vw', sm: '40vw'}}}>
             <CardHeader
                 avatar={
                     <Avatar sx={{bgcolor: "red"}} aria-label="recipe" src={props.picture}/>
@@ -30,7 +30,7 @@ function Post(props) {
             />
             <CardMedia
                 component="img"
-                height="20%"
+                height="10%"
                 image={props.post}
                 alt="Paella dish"
             />
@@ -43,7 +43,7 @@ function Post(props) {
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
-                    <Checkbox icon={<FavoriteBorder/>} checkedIcon={<Favorite/>}/>
+                    <Checkbox icon={<FavoriteBorder/>} checkedIcon={<Favorite color={'error'}/>}/>
                 </IconButton>
                 <IconButton aria-label="share">
                     <Share/>
